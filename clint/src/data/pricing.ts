@@ -6,11 +6,11 @@ export const pricingData: IPricing[] = [
         price: 29,
         period: "month",
         features: [
-            "Access to all basic courses",
-            "Community support",
-            "10 practice projects",
-            "Course completion certificate",
-            "Basic code review"
+            "AI thumbnails",
+            "50 exports",
+            "Basic templates",
+            "Image editing",
+            "Email support"
         ],
         mostPopular: false
     },
@@ -19,13 +19,13 @@ export const pricingData: IPricing[] = [
         price: 79,
         period: "month",
         features: [
-            "Access to all Pro courses",
-            "Priority community support",
-            "30 practice projects",
-            "Course completion certificate",
-            "Advance code review",
-            "1-on-1 mentoring sessions",
-            "Job assistance"
+            "Unlimited thumbnails",
+            "Premium templates",
+            "HD exports",
+            "Brand kits",
+            "Fast rendering",
+            "Priority support",
+            "Commercial use"
         ],
         mostPopular: true
     },
@@ -34,11 +34,14 @@ export const pricingData: IPricing[] = [
         price: 199,
         period: "month",
         features: [
-            "Access to all courses",
-            "Dedicated support",
-            "Unlimited projects",
-            "Course completion certificate",
-            "Premium code review"
+            "Unlimited thumbnails",
+            "Account manager",
+            "Custom AI",
+            "Team access",
+            "API integration",
+            "Enterprise security",
+            "24/7 support",
+            "Resale rights"
         ],
         mostPopular: false
     }
