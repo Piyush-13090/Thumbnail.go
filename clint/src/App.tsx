@@ -8,8 +8,15 @@ import Generate from "./pages/Generate";
 import MyGeneration from "./pages/MyGeneration";
 import YtPreview from "./pages/YtPreview";
 import Login from "./components/Login";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function App() {
+    const {pathname} = useLocation()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname])
+
     return (
         <>
             <LenisScroll />

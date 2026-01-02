@@ -57,7 +57,7 @@ export default function FeaturesSection() {
                         <img src="/assets/features-showcase-2.png" alt="features showcase" width={1000} height={500} className="hover:-translate-y-0.5 transition duration-300" />
                         <h3 className="text-[24px]/7.5 text-slate-300 font-medium mt-6">Boost your click rate</h3>
                         <p className="text-slate-300 mt-2">Stop guessing and start converting with our AI-powered thumbnail generator.</p>
-                        <a href="https://prebuiltui.com" className="group flex items-center gap-2 mt-4 text-pink-600 hover:text-pink-700 transition">
+                        <a href="" className="group flex items-center gap-2 mt-4 text-pink-600 hover:text-pink-700 transition">
                             Start generating for free
                             <ArrowUpRight className="size-5 group-hover:translate-x-0.5 transition duration-300" />
                         </a>
