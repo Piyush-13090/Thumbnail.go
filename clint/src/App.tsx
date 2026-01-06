@@ -7,9 +7,12 @@ import LenisScroll from "./components/LenisScroll";
 import Generate from "./pages/Generate";
 import MyGeneration from "./pages/MyGeneration";
 import YtPreview from "./pages/YtPreview";
+import ContactUs from "./pages/ContactUs";
 import Login from "./components/Login";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import {Toaster} from "react-hot-toast" 
+ 
 
 export default function App() {
     const {pathname} = useLocation()
@@ -19,6 +22,7 @@ export default function App() {
 
     return (
         <>
+        <Toaster />
             <LenisScroll />
             <Navbar />
             <Routes>
@@ -27,6 +31,7 @@ export default function App() {
                 <Route path="/generate/:id" element={<Generate />} />
                 <Route path="/my-generation" element={<MyGeneration />} />
                 <Route path="/preview" element={<YtPreview />} />
+                <Route path="/contact" element={<ContactUs />} />
                 <Route path="/login" element={<Login />} />
             </Routes>
             <Footer />
