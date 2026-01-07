@@ -36,7 +36,16 @@ app.use(cors({
     if (origin.includes('localhost') || origin.includes('127.0.0.1')) {
       return callback(null, true);
     }
+
+    // Allow Vercel and Render domains
+    if (origin.includes('.vercel.app') || origin.includes('.onrender.com')) {
+      return callback(null, true);
+    }
     
+    // Check against specific production domains if you have a custom domain
+    // if (origin === 'https://your-custom-domain.com') return callback(null, true);
+    
+    console.log('Blocked by CORS:', origin);
     callback(new Error('Not allowed by CORS'));
   },
   credentials: true
@@ -87,6 +96,10 @@ app.post('/test-openai', async (req: Request, res: Response) => {
       size: "1024x1024",
       quality: "standard"
     });
+
+    if (!response.data || !response.data[0]) {
+      throw new Error("No image data received");
+    }
     
     res.json({
       success: true,
