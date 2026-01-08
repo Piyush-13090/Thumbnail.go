@@ -21,6 +21,8 @@ console.log("Connecting to DB...");
 await connectDB();
 
 const app = express();
+app.set('trust proxy', 1); // Trust first proxy
+
 // Request logging middleware
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.path}`, req.headers.origin);
@@ -56,6 +58,8 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 * 7, //  1 week
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // must be 'none' to enable cross-site delivery
   },
    store: MongoStore.create({
   mongoUrl: process.env.MONGODB_URI as string,
